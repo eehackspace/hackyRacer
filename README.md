@@ -3,7 +3,7 @@ Information and code for the Hacky Racer project, in particular the ODrive and e
 
 Motor control is done with a Makerbase ODrive v3.6-56V and a Raspberry Pi Pico connected to the UART
 
-## Cabling
+## ODrive Cabling
 
 | ODrive                     | Pico  |
 | -------------------------- | ----- |
@@ -13,3 +13,14 @@ Motor control is done with a Makerbase ODrive v3.6-56V and a Raspberry Pi Pico c
 | GPIO2                      | GPIO0 |
 
 At present there is no protection against backflow of power to the USB port from the ODrive, we should fix that.
+
+## Pico Cabling
+
+| Sensor           | Pico      |
+| ---------------- | --------- |
+| Throttle         | GPIO26_A0 |
+| Steering         | GPIO27_A1 |
+| Left hand brake  | GPIO2     |
+| Right hand brake | GPIO3     |
+
+The throttle and steering pots take 3.3v from the Pico. Brakes use internal pullups.
